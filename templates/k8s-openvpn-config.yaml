@@ -1,0 +1,11 @@
+persistence:
+  storageClass: "openvpn"
+openvpn:
+  OVPN_K8S_POD_NETWORK: "10.233.0.0"
+  OVPN_K8S_POD_SUBNET: "255.255.0.0"
+service:
+  name: openvpn
+  type: NodePort
+  externalPort: 1194
+  internalPort: 443
+  nodePort: 32085

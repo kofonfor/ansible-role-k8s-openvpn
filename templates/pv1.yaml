@@ -1,0 +1,14 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: openvpn-data-1
+  labels:
+    type: local
+spec:
+  storageClassName: openvpn
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data/pvs/openvpn-pv-1"
